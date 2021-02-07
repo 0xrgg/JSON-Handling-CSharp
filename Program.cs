@@ -18,7 +18,6 @@ namespace JSONHandler
 			};
 
 			Sale sale = new Sale {
-
 				_id = 999,
 				_amount = 9999
 			};
@@ -27,9 +26,9 @@ namespace JSONHandler
 			string json = jsonhandler.OutgoingData("User", user);
 			Console.WriteLine (json);
 
-			// pass in string in above format to get back an object of appropriate type
 			json = jsonhandler.OutgoingData("Sale", sale);
 			Console.WriteLine (json);
+			// pass in string in above format to get back an object of appropriate type
 			var obj2 = jsonhandler.IncomingData(json);
         }
     }
