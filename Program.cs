@@ -38,16 +38,14 @@ namespace db
 	{
 		//
 		/// object -> json string -> encoding -> packet (event: eventName, payload: encoded json string)
-		///object -> toJson / return string -> encoding / return string -> packet / return string
-		/// 
-		/// string -> tuple<event, data> -> decode data -> deserialize string to object type based on event name
-		/// 
+		/// object -> toJson / return string -> encoding / return string -> packet / return string
+		//
 
 		public string OutgoingData(string eventName, object obj)
 		{
 			// pass generic object to receive string
 			string innerdata = ToJson (obj);
-			//Console.WriteLine (innerdata);
+
 			//encode string
 			string encoded = ToBase64 (innerdata);
 
@@ -58,7 +56,7 @@ namespace db
 
 			// jsonify eventname + encoded
 			string outerdata = ToJson(packet);
-//			Console.WriteLine (outerdata);
+//			
 			return outerdata;
 		}
 			
