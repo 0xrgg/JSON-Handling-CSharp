@@ -112,7 +112,6 @@ namespace JSONHandler
 	{
 		public string _event;
 		public string _payload;
-		public Sale _sale;
 	}
 
 	public class User
