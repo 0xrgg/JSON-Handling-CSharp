@@ -56,7 +56,7 @@ namespace JSONHandler
 
 			// jsonify eventname + encoded
 			string outerdata = ToJson(packet);
-//			
+		
 			return outerdata;
 		}
 			
