@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace db
+namespace JSONHandler
 {
     class Program
     {
